@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
 		AppRoutingModule,
 		FormsModule,
 		CoreModule,
-		MatIconModule
+		MatIconModule,
+		SharedModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

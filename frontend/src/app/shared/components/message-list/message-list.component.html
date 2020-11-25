@@ -1,3 +1,3 @@
 <ng-container *ngFor="let message of list">
-	<message [message]="message"></message>
+	<message [ngClass]="{'self': !!message.self}" [message]="message"></message>
 </ng-container>

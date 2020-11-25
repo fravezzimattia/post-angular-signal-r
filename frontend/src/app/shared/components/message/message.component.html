@@ -1,10 +1,12 @@
-<div id='cm-msg' class="chat-msg">
-	<span class="msg-avatar">
-		<img [src]="message.avatarUrl">
-	</span>
-	<div class="cm-msg-text">
-		{{message.text}}
-	</div>
-</div>
+<span class="avatar">
+	<img [src]="message.user.avatarUrl">
+</span>
 
-<!-- $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight }, 1000); -->
+<div class="message">
+	<div class="user">
+		{{message.user.name}}
+	</div>
+	<span class="text">
+		{{message.text}}
+	</span>
+</div>

@@ -5,7 +5,7 @@ import * as signalR from "@aspnet/signalr";
 	providedIn: 'root'
 })
 export class SignalRService {
-	private baseUrl = ""
+	private baseUrl: string = "http://localhost:5000/api/ws";
 	private hubConnection: signalR.HubConnection
 
 	public startConnection() {

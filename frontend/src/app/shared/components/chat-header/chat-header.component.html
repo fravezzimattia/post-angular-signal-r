@@ -1,0 +1,10 @@
+<div class="header-user">
+	<div *ngIf="!!imgUrl">
+		<img [src]="imgUrl">
+	</div>
+	<div *ngIf="!!title" class="title">
+		{{ title }}
+	</div>
+</div>
+
+<span class="chat-box-toggle" (click)="onToggleChat()"><i class="material-icons">close</i></span>

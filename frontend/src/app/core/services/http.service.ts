@@ -5,13 +5,14 @@ import { Observable, throwError } from 'rxjs';
 import { httpOptionsJson } from '../helpers/http.helper';
 
 export class HttpService {
+	private serverUrl: string = "http://localhost:5000/api/";
 	public httpOptions = httpOptionsJson();
 
 	constructor(
 		public httpClient: HttpClient,
 		public baseUrl: string
 	) {
-		this.baseUrl = baseUrl;
+		this.baseUrl = this.serverUrl + baseUrl;
 	}
 
 	public httpGet(url: string, headers?: HttpHeaders): Observable<any> {

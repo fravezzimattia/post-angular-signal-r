@@ -49,7 +49,9 @@ export class AppComponent {
 
 		this.chatService.sendMessage(this.generateMessage(this.message))
 			.pipe(take(1))
-			.subscribe(res => console.log(res));
+			.subscribe(res => {
+				this.message = '';
+			});
 	}
 
 	public generateMessage(message: string): Message {
@@ -60,7 +62,7 @@ export class AppComponent {
 		return item;
 	}
 
-	public toggleChat() {
+	public onToggleChat() {
 		this.showChat = !this.showChat;
 	}
 

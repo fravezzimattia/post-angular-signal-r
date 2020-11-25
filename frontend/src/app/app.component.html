@@ -4,16 +4,13 @@
 </div>
 <div id="body">
 
-	<div *ngIf="!showChat" id="chat-circle" class="btn btn-raised" (click)="toggleChat()">
+	<div *ngIf="!showChat" id="chat-circle" class="btn btn-raised" (click)="onToggleChat()">
 		<div id="chat-overlay"></div>
 		<i class="material-icons">speaker_phone</i>
 	</div>
 
 	<div *ngIf="!!showChat" class="chat-box">
-		<div class="chat-box-header">
-			ChatBot
-			<span class="chat-box-toggle" (click)="toggleChat()"><i class="material-icons">close</i></span>
-		</div>
+		<chat-header [imgUrl]="user.avatarUrl" [title]="user.name" (toggleChat)="onToggleChat()"></chat-header>
 		<div class="chat-box-body">
 			<div class="chat-box-overlay">
 			</div>

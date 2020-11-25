@@ -1,0 +1,37 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 8px;
+    background: #5A5EB9;
+    height: 45px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .title {
+            margin-left: 16px;
+        }
+
+    }
+
+
+	.chat-box-toggle{
+		cursor: pointer;
+	}
+
+}

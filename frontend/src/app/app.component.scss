@@ -69,16 +69,6 @@ body {
     cursor: pointer;
 }
 
-.chat-box-header {
-    background: #5A5EB9;
-    height: 35px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    padding-top: 17px;
-}
 
 .chat-box-body {
     position: relative;
@@ -183,6 +173,7 @@ body {
     }
 }
 
+
 .chat-msg.user>.msg-avatar img {
     width: 45px;
     height: 45px;
@@ -191,36 +182,6 @@ body {
     width: 15%;
 }
 
-.chat-msg.self>.msg-avatar img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    float: right;
-    width: 15%;
-}
-
-.cm-msg-text {
-    background: white;
-    padding: 10px 15px 10px 15px;
-    color: #666;
-    max-width: 75%;
-    float: left;
-    margin-left: 10px;
-    position: relative;
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-
-.chat-msg {
-    clear: both;
-}
-
-.chat-msg.self>.cm-msg-text {
-    float: right;
-    margin-right: 10px;
-    background: #5A5EB9;
-    color: white;
-}
 
 .cm-msg-button>ul>li {
     list-style: none;

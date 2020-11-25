@@ -14,8 +14,8 @@ export class ChatService extends HttpService {
 		super(httpClient, 'chats');
 	}
 
-	sendMessage(message: Message) {
-		const url = `${this.baseUrl}`;
+	public sendMessage(message: Message) {
+		const url = `${this.baseUrl}/messages`;
 		return this.httpPost(url, message)
 	}
 }
