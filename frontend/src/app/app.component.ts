@@ -49,21 +49,19 @@ export class AppComponent {
 
 		this.chatService.sendMessage(this.generateMessage(this.message))
 			.pipe(take(1))
-			.subscribe(res => {
-				this.message = '';
-			});
+			.subscribe(() => this.message = '');
+	}
+	
+	public onToggleChat() {
+		this.showChat = !this.showChat;
 	}
 
-	public generateMessage(message: string): Message {
+	private generateMessage(message: string): Message {
 		let item = new Message();
 		item.text = message;
 		item.datetime = new Date();
 		item.user = this.user;
 		return item;
-	}
-
-	public onToggleChat() {
-		this.showChat = !this.showChat;
 	}
 
 	ngOnDestroy(): void {

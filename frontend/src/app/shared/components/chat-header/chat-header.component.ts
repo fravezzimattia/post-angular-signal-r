@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
 	selector: 'chat-header',
@@ -15,7 +15,7 @@ export class ChatHeaderComponent {
 	@Output()
 	public toggleChat = new EventEmitter();
 
-	public onToggleChat(){
+	public onToggleChat() {
 		this.toggleChat.emit()
 	}
 }

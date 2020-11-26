@@ -1,24 +1,27 @@
 <div id="center-text">
-	<h2>ChatBox UI</h2>
-	<p>Message send and scroll to bottom enabled </p>
+	<h2>Signal - R</h2>
+	<p>Rendi Real time la tua web application!</p>
 </div>
-<div id="body">
 
+<div id="body">
+	<!-- TODO: Fab button component -->
 	<div *ngIf="!showChat" id="chat-circle" class="btn btn-raised" (click)="onToggleChat()">
 		<div id="chat-overlay"></div>
 		<i class="material-icons">speaker_phone</i>
 	</div>
 
+	<!-- TODO: Chat component -->
 	<div *ngIf="!!showChat" class="chat-box">
 		<chat-header [imgUrl]="user.avatarUrl" [title]="user.name" (toggleChat)="onToggleChat()"></chat-header>
+		<!-- TODO: Chat body component -->
 		<div class="chat-box-body">
 			<div class="chat-box-overlay">
 			</div>
 			<div class="chat-logs">
 				<message-list [list]="messageList"></message-list>
 			</div>
-			<!--chat-log -->
 		</div>
+		<!-- TODO: Chat footer component -->
 		<div class="chat-input">
 			<input [(ngModel)]="message" required type="text" id="chat-input" placeholder="Send a message..." />
 			<button (click)="onSubmit()" type="submit" class="chat-submit" id="chat-submit">

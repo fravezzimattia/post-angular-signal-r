@@ -16,7 +16,7 @@ export class LoginService extends HttpService {
 		super(httpClient, 'users');
 	}
 
-	getUser(): Observable<User> {
+	public getUser(): Observable<User> {
 		const url = `${this.baseUrl}/login`;
 		return this.httpGet(url)
 	}
