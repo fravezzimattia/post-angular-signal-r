@@ -11,9 +11,7 @@ namespace SignalR.Controllers
     {
         private readonly IHubContext<MyHub> _hub;
 
-        public ChatsController(
-             IHubContext<MyHub> hub
-            )
+        public ChatsController(IHubContext<MyHub> hub)
         {
             _hub = hub;
         }
